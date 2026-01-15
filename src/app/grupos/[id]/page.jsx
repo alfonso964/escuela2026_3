@@ -11,7 +11,7 @@ async function PaginaGrupo({ params }) {
         <div>
             <h1 className='text-4xl'>Grupo</h1>
 
-            <Suspense fallback={<p className='text-2xl text-blue-300'>Cargando...</p>}>
+            <Suspense fallback={<p className='text-2xl text-blue-400'>Cargando...</p>}>
                 <Grupo promesaGrupo={promesaGrupo} />
             </Suspense>
 

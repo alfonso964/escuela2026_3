@@ -11,7 +11,7 @@ async function PaginaAsignatura({ params }) {
         <div>
             <h1 className='text-4xl'>Asignatura</h1>
 
-            <Suspense fallback={<p className='text-2xl text-blue-300'>Cargando...</p>}>
+            <Suspense fallback={<p className='text-2xl text-blue-400'>Cargando...</p>}>
                 <Asignatura promesaAsignatura={promesaAsignatura} />
             </Suspense>
 

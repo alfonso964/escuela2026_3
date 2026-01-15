@@ -11,7 +11,7 @@ function PaginaAsignaturas() {
         <div>
             <h1 className='text-4xl'>PaginaAsignaturas</h1>
 
-            <Suspense fallback={<p className='text-2xl text-blue-300'>Cargando...</p>}>
+            <Suspense fallback={<p className='text-2xl text-blue-400'>Cargando...</p>}>
                 <ListaAsignaturas
                     promesaAsignaturas={promesaAsignaturas}
                 />

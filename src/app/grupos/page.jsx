@@ -11,7 +11,7 @@ function PaginaGrupos() {
         <div>
             <h1 className='text-4xl'>PaginaGrupos</h1>
 
-            <Suspense fallback={<p className='text-2xl text-blue-300'>Cargando...</p>}>
+            <Suspense fallback={<p className='text-2xl text-blue-400'>Cargando...</p>}>
                 <ListaGrupos
                     promesaGrupos={promesaGrupos}
                 />
