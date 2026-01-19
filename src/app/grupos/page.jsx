@@ -1,4 +1,5 @@
 import ListaGrupos from '@/components/grupos/lista'
+import InsertarGrupo from '@/components/grupos/insertar'
 import { obtenerGrupos } from '@/lib/data'
 import { Suspense } from 'react'
 
@@ -9,7 +10,9 @@ function PaginaGrupos() {
 
     return (
         <div>
-            <h1 className='text-4xl'>PaginaGrupos</h1>
+            <h1 className='text-4xl'>Grupos</h1>
+
+            <InsertarGrupo />
 
             <Suspense fallback={<p className='text-2xl text-blue-400'>Cargando...</p>}>
                 <ListaGrupos

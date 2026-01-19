@@ -9,7 +9,7 @@ function PaginaAsignaturas() {
 
     return (
         <div>
-            <h1 className='text-4xl'>PaginaAsignaturas</h1>
+            <h1 className='text-4xl'>Asignaturas</h1>
 
             <Suspense fallback={<p className='text-2xl text-blue-400'>Cargando...</p>}>
                 <ListaAsignaturas
