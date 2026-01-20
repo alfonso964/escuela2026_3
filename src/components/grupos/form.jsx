@@ -27,7 +27,12 @@ export default function Form({ action, grupo, disabled = false, textSubmit = "En
                 defaultValue={grupo?.aula}
                 disabled={disabled}
             />
-            <button type="submit">{textSubmit}</button>
+            <button
+                type="submit"
+                className="bg-blue-500 text-white p-2 rounded-md"
+            >
+                {textSubmit}
+            </button>
         </form>
     )
 }

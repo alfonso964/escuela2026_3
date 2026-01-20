@@ -2,17 +2,33 @@ import Form from '@/components/estudiantes/form'
 import ListaEstudiantes from '@/components/estudiantes/lista'
 import { obtenerEstudiantes } from '@/lib/data'
 import { Suspense } from 'react'
+import { insertarEstudiante } from '@/lib/actions'
+import Link from 'next/link'
+import { PlusIcon } from 'lucide-react'
+import Modal from '@/components/modal'
 
 
-function PaginaEstudiantes() {
+export default function PaginaEstudiantes() {
 
     const promesaEstudiantes = obtenerEstudiantes()  // Promesa, no usamos AWAIT
 
     return (
-        <div>
-            <h1 className='text-4xl'>Estudiantes</h1>
+        <div className='p-4'>
 
-            <Form />
+            <div className='flex justify-center items-center gap-4 pb-4'>
+                <h1 className='text-4xl'>
+                    <Link href="/">Estudiantes</Link>
+                </h1>
+
+                <Modal openElement={
+                    <PlusIcon size={32}
+                        className='text-green-500 border border-green-500 rounded-full bg-green-200 p-2 cursor-pointer hover:text-green-500 hover:bg-green-300'
+                    />}>
+                    <h2 className='text-2xl font-bold'>INSERTAR ESTUDIANTE</h2>
+                    <Form action={insertarEstudiante} />
+                </Modal>
+
+            </div>
 
             <Suspense fallback={<p className='text-2xl text-blue-400'>Cargando...</p>}>
                 <ListaEstudiantes
@@ -23,6 +39,6 @@ function PaginaEstudiantes() {
     )
 }
 
-export default PaginaEstudiantes
+
 
 
